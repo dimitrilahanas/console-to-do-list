@@ -5,7 +5,8 @@ public class Controller {
     Scanner input = new Scanner(System.in);
 
     // Task Inputs
-    Tasklist tasklist = new Tasklist();
+    TaskList list = new TaskList();
+
     private void createTask() {
         System.out.print("Enter task name: ");
         String taskName = input.nextLine();
@@ -13,7 +14,7 @@ public class Controller {
         System.out.print("Enter task description: ");
         String taskDescription = input.nextLine();
 
-        tasklist.addTask(taskName, taskDescription);
+        list.addTask(taskName, taskDescription);
         System.out.println(taskName + " has been to your task list.");
     }
 
@@ -37,6 +38,7 @@ public class Controller {
                     createTask();
                     break;
                 case 2:
+                    list.viewTasks();
                     break;
                 case 3:
                     break;

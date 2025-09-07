@@ -11,7 +11,7 @@ public class Task {
         this.taskName = taskName;
     }
 
-    public void setTaskDesciption(String taskDescription) {
+    public void setTaskDescription(String taskDescription) {
         this.taskDescription = taskDescription;
     }
 

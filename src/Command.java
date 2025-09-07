@@ -3,7 +3,7 @@ public class Command {
         String[] supportedCommands = {
             "0 - Exit System",
             "1 - Create Task",
-            "2 - View Task",
+            "2 - View Tasks",
             "3 - Delete Task"
         };
 
