@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Task {
     private String taskName;
     private String taskDescription;
@@ -9,24 +7,26 @@ public class Task {
         this.taskDescription = taskDescription;
     }
 
-    Scanner input = new Scanner(System.in);
-
-    private void setTaskName() {
-        System.out.print("Enter task name: ");
-        taskName = input.nextLine();
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
     }
 
-    private void setTaskDesciption() {
-        System.out.print("Enter task description: ");
-        taskDescription = input.nextLine();
+    public void setTaskDesciption(String taskDescription) {
+        this.taskDescription = taskDescription;
     }
 
-    private String getTaskName() {
+    public String getTaskName() {
         return taskName;
     }
     
-    private String getTaskDescription() {
+    public String getTaskDescription() {
         return taskDescription;
+    }
+
+    @Override
+    public String toString() {
+        return "Task: " + taskName +
+        "\nDescription: " + taskDescription;
     }
 
 }

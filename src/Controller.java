@@ -2,22 +2,7 @@ import java.util.Scanner;
 
 public class Controller {
 
-    private String[] commandList() {
-        String[] supportedCommands = {
-            "0 - Exit System",
-            "1 - Create Task",
-            "2 - View Task",
-            "3 - Delete Task"
-        };
-
-        return supportedCommands;
-    }
-
-    private void getCommandList() {
-        for (String commands : commandList()) {
-            System.out.println(commands);
-        }
-    }
+    Command command = new Command();
 
     private void selectCommand() {
         Scanner input = new Scanner(System.in);
@@ -42,7 +27,6 @@ public class Controller {
                     break;
                 default:
                     System.out.println("Invalid Command.");
-                    break;
             }
         }
         while (selection != 0);
@@ -50,7 +34,7 @@ public class Controller {
     }
 
     public void runner() {
-        getCommandList();
+        command.getCommandList();
         selectCommand();
     }
 
