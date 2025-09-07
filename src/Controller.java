@@ -14,7 +14,7 @@ public class Controller {
         String taskDescription = input.nextLine();
 
         tasklist.addTask(taskName, taskDescription);
-        System.out.println("Task " + taskName + " added.");
+        System.out.println(taskName + " has been to your task list.");
     }
 
     // Commands Inputs
@@ -27,6 +27,7 @@ public class Controller {
         do {
             System.out.print("Select a command: ");
             selection = input.nextInt();
+            input.nextLine();
 
             switch (selection) {
                 case 0:
