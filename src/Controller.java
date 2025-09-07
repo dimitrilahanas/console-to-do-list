@@ -2,10 +2,26 @@ import java.util.Scanner;
 
 public class Controller {
 
+    Scanner input = new Scanner(System.in);
+
+    // Task Inputs
+    Tasklist tasklist = new Tasklist();
+    private void createTask() {
+        System.out.print("Enter task name: ");
+        String taskName = input.nextLine();
+
+        System.out.print("Enter task description: ");
+        String taskDescription = input.nextLine();
+
+        tasklist.addTask(taskName, taskDescription);
+        System.out.println("Task " + taskName + " added.");
+    }
+
+    // Commands Inputs
     Command command = new Command();
 
     private void selectCommand() {
-        Scanner input = new Scanner(System.in);
+        
         int selection;
 
         do {
@@ -17,20 +33,17 @@ public class Controller {
                     System.out.println("Exiting System...");
                     break;
                 case 1:
-                    System.out.println("Create Task.");
+                    createTask();
                     break;
                 case 2:
-                    System.out.println("View Task.");
                     break;
                 case 3:
-                    System.out.println("Delete Task.");
                     break;
                 default:
                     System.out.println("Invalid Command.");
             }
         }
         while (selection != 0);
-        input.close();
     }
 
     public void runner() {
