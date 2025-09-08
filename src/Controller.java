@@ -19,9 +19,9 @@ public class Controller {
     }
 
     private void removeTask() {
-        System.out.print("Enter task index to be removed: ");
-        int taskIndex = input.nextInt();
-        list.removeTask(taskIndex);
+        System.out.print("Enter task to be removed: ");
+        String taskContains = input.nextLine();
+        list.removeTask(taskContains);
     }
 
     // Commands Inputs
