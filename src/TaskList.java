@@ -9,9 +9,7 @@ public class TaskList {
     }
 
     public void viewTasks() {
-        for (Task task : tasks) {
-            System.out.println(task);
-        }
+        tasks.forEach(task -> System.out.println(task));
     }
 
     public void removeTask(String taskContains) {
