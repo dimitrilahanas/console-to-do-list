@@ -13,4 +13,13 @@ public class TaskList {
             System.out.println(task);
         }
     }
+
+    public void removeTask(int taskIndex) {
+        try {
+            tasks.remove(taskIndex);
+        }
+        catch (IndexOutOfBoundsException e) {
+            System.out.println("Not a task in the list.");
+        }
+    }
 }
