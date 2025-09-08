@@ -18,6 +18,12 @@ public class Controller {
         System.out.println(taskName + " has been to your task list.");
     }
 
+    private void removeTask() {
+        System.out.print("Enter task index to be removed: ");
+        int taskIndex = input.nextInt();
+        list.removeTask(taskIndex);
+    }
+
     // Commands Inputs
     Command command = new Command();
 
@@ -41,6 +47,7 @@ public class Controller {
                     list.viewTasks();
                     break;
                 case 3:
+                    removeTask();
                     break;
                 default:
                     System.out.println("Invalid Command.");
