@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Controller {
@@ -33,7 +34,13 @@ public class Controller {
 
         do {
             System.out.print("Select a command: ");
-            selection = input.nextInt();
+
+            try {
+                selection = input.nextInt();
+            } catch (InputMismatchException e) {
+                selection = 10;
+            }
+            
             input.nextLine();
 
             switch (selection) {
