@@ -11,17 +11,7 @@ A simple Java console-based Todo application that allows you to create, view, an
 ## How to Run
 1. Clone or download the repository to your local machine.
 2. Ensure you have Java (JDK 8 or higher) installed.
-3. Compile the project:
-   ```bash
-   javac *.java
-   ```
-4. Run the program:
-   ```bash
-   java TodoApp
-   ```
-
-### Alternative run methods
-- If you have a build script (`build.sh` for Linux/Mac or `build.bat` for Windows), run:
+3. Run respecive build file (`build.sh` for Linux/Mac or `build.bat` for Windows), run:
   ```bash
   ./build.sh
   ```
