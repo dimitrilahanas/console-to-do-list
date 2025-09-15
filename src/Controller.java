@@ -65,6 +65,7 @@ public class Controller {
     }
 
     public void runner() {
+        list.setTasks();
         command.getCommandList();
         selectCommand();
     }
