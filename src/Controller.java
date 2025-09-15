@@ -40,11 +40,12 @@ public class Controller {
             } catch (InputMismatchException e) {
                 selection = 10;
             }
-            
+
             input.nextLine();
 
             switch (selection) {
                 case 0:
+                    list.saveTasks();
                     System.out.println("Exiting System...");
                     break;
                 case 1:
