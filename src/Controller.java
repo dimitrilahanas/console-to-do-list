@@ -16,7 +16,7 @@ public class Controller {
         String taskDescription = input.nextLine();
 
         list.addTask(taskName, taskDescription);
-        System.out.println(taskName + " has been to your task list.");
+        System.out.println(taskName + " has been added to your task list.");
     }
 
     private void removeTask() {
