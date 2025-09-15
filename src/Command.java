@@ -1,7 +1,7 @@
 public class Command {
     private String[] commandList() {
         String[] supportedCommands = {
-            "0 - Exit System",
+            "0 - Exit & Save System",
             "1 - Create Task",
             "2 - View Tasks",
             "3 - Delete Task"
