@@ -26,7 +26,7 @@ public class TaskList {
     public void saveTasks() {
         try (FileWriter writer = new FileWriter(database)) {
             for (Task task : tasks) {
-                writer.write(task.toString() + "\n");
+                writer.write(task.getTaskName() + "\n" + task.getTaskDescription() + "\n");
             }
 
         } catch (IOException e) {
